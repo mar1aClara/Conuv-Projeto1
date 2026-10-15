@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap');
+﻿@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap');
 
 :root {
 	color-scheme: light;
@@ -41,8 +41,12 @@ a {
 	text-decoration: none;
 }
 
-.site-header {
-	width: min(1240px, calc(100% - 64px));
+.centralizacao{
+	margin-top: 15px;
+}
+.cabecalho-site {
+	width: 100%;
+	padding:10px 32px;
 	min-height: 84px;
 	margin: 0 auto;
 	display: flex;
@@ -52,7 +56,7 @@ a {
 	border-bottom: 1px solid var(--line);
 }
 
-.brand {
+.logotipo {
 	display: inline-flex;
 	align-items: center;
 	gap: 10px;
@@ -61,11 +65,16 @@ a {
 	white-space: nowrap;
 }
 
-.brand strong {
+#logoimg{
+	width: 50px;
+	height: 50px;
+}
+
+.marca strong {
 	font-weight: 700;
 }
 
-.brand-mark {
+.simbolo-marca {
 	width: 34px;
 	height: 34px;
 	display: grid;
@@ -78,7 +87,7 @@ a {
 	line-height: 1;
 }
 
-.main-nav {
+.navegacao {
 	display: flex;
 	align-items: center;
 	gap: 32px;
@@ -86,61 +95,51 @@ a {
 	font-weight: 600;
 }
 
-.main-nav a,
-.site-footer a {
+.navegacao a,
+.rodape-site a {
 	transition: color 160ms ease;
 }
 
-.main-nav a:hover,
-.site-footer a:hover {
+.navegacao a:hover,
+.rodape-site a:hover {
 	color: var(--coral);
 }
 
-.main-nav .nav-cta {
+.navegacao .botao-cadastro {
 	padding: 10px 16px;
 	border: 1px solid var(--ink);
 	border-radius: 3px;
 }
 
-.nav-cta span,
-.button span,
-.text-link span,
-.site-footer a span {
+.navegacao .botao-cadastro span,
+.botao span,
+.link-texto span,
+.rodape-site a span {
 	margin-left: 8px;
 }
 
-.hero {
-	width: min(1240px, calc(100% - 64px));
+.destaque {
+	width: 100%;
 	min-height: 580px;
 	margin: 0 auto;
-	padding: 68px 0 76px;
+	padding: 68px;
 	display: grid;
 	grid-template-columns: 0.9fr 1.1fr;
 	align-items: center;
-	gap: clamp(40px, 8vw, 112px);
+	gap:20px;
+	background-image:linear-gradient(to right, var(--green) 45%, rgba(33, 77, 64, 0.4) 55%), url(/img/cachorro1.jpg);
+	background-position: right;
+	background-color: var(--green);
+	color: var(--white);
 }
 
-.hero-copy {
+.texto-destaque {
 	max-width: 490px;
 	padding-bottom: 10px;
+	
 }
 
-.eyebrow {
-	margin: 0 0 18px;
-	color: var(--green);
-	font-size: 12px;
-	font-weight: 700;
-	letter-spacing: 0.08em;
-	text-transform: uppercase;
-}
-
-.hero .eyebrow {
-	display: flex;
-	align-items: center;
-	gap: 9px;
-}
-
-.hero .eyebrow span {
+.destaque  span {
 	width: 8px;
 	height: 8px;
 	border-radius: 50%;
@@ -160,18 +159,18 @@ h3 {
 	line-height: 1.12;
 }
 
-.hero h1,
-.section-heading h2,
-.volunteer h2,
-.signup h2,
-.registration-intro h1 {
+.destaque h1,
+.cabecalho-secao h2,
+.voluntariado h2,
+.secao-cadastro h2,
+.introducao-cadastro h1 {
 	margin-bottom: 20px;
 	font-family: var(--font-display);
 	font-weight: 600;
 	letter-spacing: 0;
 }
 
-.hero h1 {
+.destaque h1 {
 	max-width: 470px;
 	font-size: clamp(42px, 5vw, 64px);
 }
@@ -182,14 +181,14 @@ h2 em {
 	font-weight: 600;
 }
 
-.hero-description {
+.descricao-destaque {
 	max-width: 400px;
 	margin-bottom: 28px;
-	color: var(--muted);
+	color: var(--white);
 	font-size: 17px;
 }
 
-.button {
+.botao {
 	min-height: 48px;
 	padding: 12px 18px;
 	display: inline-flex;
@@ -202,56 +201,33 @@ h2 em {
 	transition: transform 160ms ease, background-color 160ms ease;
 }
 
-.button:hover {
+.botao:hover {
 	transform: translateY(-2px);
 }
 
-.button-dark {
-	background: var(--ink);
+.botao-escuro {
+	background: var(--coral);
 	color: var(--white);
 }
 
-.button-dark:hover {
+.botao-escuro:hover {
 	background: var(--green);
 }
 
-.button-light {
+.botao-claro {
 	flex: 0 0 auto;
 	background: var(--yellow);
 	color: var(--ink);
 }
 
-.hero-note {
-	margin: 15px 0 0;
-	color: var(--muted);
-	font-size: 12px;
-}
-
-.hero-image-wrap {
-	position: relative;
-	min-width: 0;
-	padding: 0 14px 14px 0;
-}
-
-.hero-image-wrap::after {
-	position: absolute;
-	z-index: -1;
-	right: 0;
-	bottom: 0;
-	width: 82%;
-	height: 65%;
-	background: var(--yellow);
-	content: '';
-}
-
-.hero-image {
+.imagem-destaque {
 	width: 100%;
 	height: 410px;
 	object-fit: cover;
 	object-position: center 43%;
 }
 
-.image-note {
+.legenda-imagem {
 	position: absolute;
 	right: 32px;
 	bottom: 31px;
@@ -262,79 +238,63 @@ h2 em {
 	font-weight: 700;
 }
 
-.image-note span {
+.legenda-imagem  {
 	margin-left: 8px;
 	color: var(--coral);
 	font-size: 16px;
 }
 
-.hero-sticker {
-	position: absolute;
-	top: -18px;
-	right: -18px;
-	width: 86px;
-	height: 86px;
-	display: grid;
-	place-content: center;
-	border-radius: 50%;
-	background: var(--coral);
-	color: var(--white);
-	font-family: var(--font-display);
-	font-size: 15px;
-	line-height: 1.15;
-	text-align: center;
-	transform: rotate(8deg);
-}
 
-.section-shell {
-	width: min(1240px, calc(100% - 64px));
+.largura-conteudo {
+	width: 100%;
 	margin: 0 auto;
 }
 
-.catalog {
-	padding: 70px 0 90px;
+.secao-adocao {
+	padding: 70px ;
 	border-top: 1px solid var(--line);
 }
 
-.section-heading {
+.cabecalho-secao {
 	margin-bottom: 34px;
 	display: flex;
 	align-items: end;
-	justify-content: space-between;
-	gap: 48px;
+	justify-content: space-between; 
+	 gap: 48px; 
 }
 
-.section-heading .eyebrow {
+.cabecalho-secao .chamada {
 	margin-bottom: 12px;
 }
 
-.section-heading h2,
-.volunteer h2,
-.signup h2 {
+.cabecalho-secao h2,
+.voluntariado h2,
+.secao-cadastro h2 {
 	margin-bottom: 0;
 	font-size: 40px;
 }
 
-.section-heading > p {
+.cabecalho-secao > p {
 	max-width: 350px;
 	margin-bottom: 4px;
 	color: var(--muted);
 	font-size: 14px;
 }
 
-.animal-grid {
+.grade-animais {
 	display: grid;
-	grid-template-columns: repeat(3, minmax(0, 1fr));
+	grid-template-columns: repeat(4, minmax(0, 1fr));
 	gap: 24px;
+	padding: 4px;
 }
 
-.animal-card {
+.cartao-animal {
 	min-width: 0;
 	background: var(--white);
 	border: 1px solid var(--line);
 }
 
-.animal-photo {
+.foto-animal {
 	position: relative;
 	display: block;
 	overflow: hidden;
@@ -342,18 +302,18 @@ h2 em {
 	background: #e8eee9;
 }
 
-.animal-photo img {
+.foto-animal img {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
 	transition: transform 220ms ease;
 }
 
-.animal-photo:hover img {
+.foto-animal:hover img {
 	transform: scale(1.04);
 }
 
-.animal-tag {
+.etiqueta-animal {
 	position: absolute;
 	right: 12px;
 	bottom: 12px;
@@ -364,125 +324,81 @@ h2 em {
 	font-weight: 700;
 }
 
-.animal-info {
+.dados-animal {
 	padding: 18px 20px 20px;
 }
 
-.animal-title {
+.titulo-animal {
 	display: flex;
 	align-items: baseline;
 	justify-content: space-between;
 	gap: 12px;
 }
 
-.animal-title h3 {
+.titulo-animal h3 {
 	margin: 0;
 	font-family: var(--font-display);
 	font-size: 24px;
 	font-weight: 600;
 }
 
-.animal-title span {
+.titulo-animal span {
 	color: var(--muted);
 	font-size: 12px;
 }
 
-.animal-info > p {
+.dados-animal > p {
 	min-height: 44px;
 	margin: 10px 0 15px;
 	color: var(--muted);
 	font-size: 13px;
 }
 
-.text-link {
+.link-texto {
 	color: var(--green);
 	font-size: 13px;
 	font-weight: 700;
 }
 
-.text-link:hover {
+.link-texto:hover {
 	color: var(--coral);
 }
 
-.catalog-note {
+.nota-catalogo {
 	margin: 16px 0 0;
 	color: var(--muted);
 	font-size: 11px;
 }
 
-.volunteer {
-	background: var(--green);
+.voluntariado {
+	background-image: linear-gradient(to right, var(--green) 70%, rgba(33, 77, 64, 0.4) 20%), url(/img/gato1.jpg);
+	background-position: right;
+	background-repeat: no-repeat;
 	color: var(--white);
+	display: flex;
 }
 
-.volunteer-inner {
-	width: min(1240px, calc(100% - 64px));
+.conteudo-voluntariado {
 	min-height: 270px;
-	margin: 0 auto;
-	padding: 52px 0;
-	display: grid;
-	grid-template-columns: 72px minmax(0, 1fr) auto;
-	align-items: center;
+	padding: 52px ;
 	gap: 34px;
-}
+} 
 
-.volunteer-symbol {
-	width: 66px;
-	height: 66px;
-	display: grid;
-	place-items: center;
-	border: 1px solid rgb(255 255 255 / 34%);
-	border-radius: 50%;
-	color: var(--yellow);
-	font-size: 34px;
-}
-
-.volunteer .eyebrow {
+.voluntariado .chamada {
 	margin-bottom: 12px;
 	color: var(--yellow);
 }
 
-.volunteer h2 {
+.voluntariado h2 {
 	max-width: 620px;
 	margin-bottom: 12px;
 }
 
-.volunteer h2 em {
+.voluntariado h2 em {
 	color: var(--yellow);
 }
 
-.volunteer-copy > p:last-child {
-	max-width: 590px;
-	margin: 0;
-	color: #d6e1d9;
-	font-size: 14px;
-}
-
-.signup {
-	min-height: 250px;
-	padding: 60px 0;
-	display: grid;
-	grid-template-columns: 1.2fr 0.8fr auto;
-	align-items: center;
-	gap: 40px;
-}
-
-.signup .eyebrow {
-	margin-bottom: 12px;
-}
-
-.signup h2 {
-	max-width: 460px;
-	font-size: 34px;
-}
-
-.signup > p {
-	margin: 0;
-	color: var(--muted);
-	font-size: 14px;
-}
-
-.site-footer {
+.rodape-site {
 	min-height: 92px;
 	padding: 20px max(32px, calc((100% - 1240px) / 2));
 	display: flex;
@@ -493,33 +409,33 @@ h2 em {
 	font-size: 12px;
 }
 
-.brand-footer {
+.marca-rodape {
 	font-size: 16px;
 }
 
-.brand-footer .brand-mark {
+.marca-rodape .simbolo-marca {
 	width: 29px;
 	height: 29px;
 	font-size: 21px;
 }
 
-.site-footer p {
+.rodape-site p {
 	margin: 0;
 	color: var(--muted);
 }
 
-.site-footer small {
+.rodape-site small {
 	color: var(--muted);
 	white-space: nowrap;
 }
 
-.registration-page {
+.pagina-cadastro {
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
 }
 
-.registration-main {
+.conteudo-cadastro {
 	width: min(1060px, calc(100% - 64px));
 	margin: 0 auto;
 	padding: 68px 0 80px;
@@ -529,59 +445,59 @@ h2 em {
 	gap: clamp(40px, 8vw, 100px);
 }
 
-.registration-intro {
+.introducao-cadastro {
 	position: sticky;
 	top: 40px;
 	padding-top: 18px;
 }
 
-.registration-intro h1 {
+.introducao-cadastro h1 {
 	font-size: 48px;
 }
 
-.registration-intro > p:last-child {
+.introducao-cadastro > p:last-child {
 	max-width: 350px;
 	color: var(--muted);
 }
 
-.registration-form {
+.formulario-cadastro {
 	padding: 30px;
 	background: var(--white);
 	border: 1px solid var(--line);
 }
 
-.registration-form h2 {
+.formulario-cadastro h2 {
 	margin-bottom: 22px;
 	font-family: var(--font-display);
 	font-size: 24px;
 	font-weight: 600;
 }
 
-.form-grid {
+.grade-formulario {
 	display: grid;
 	grid-template-columns: repeat(2, minmax(0, 1fr));
 	gap: 18px 16px;
 }
 
-.form-field {
+.campo-formulario {
 	display: flex;
 	flex-direction: column;
 	gap: 7px;
 }
 
-.form-field-full {
+.campo-formulario-integral {
 	grid-column: 1 / -1;
 }
 
-.form-field label,
-.consent {
+.campo-formulario label,
+.consentimento {
 	font-size: 13px;
 	font-weight: 600;
 }
 
-.form-field input,
-.form-field select,
-.form-field textarea {
+.campo-formulario input,
+.campo-formulario select,
+.campo-formulario textarea {
 	width: 100%;
 	min-height: 46px;
 	padding: 10px 12px;
@@ -593,19 +509,19 @@ h2 em {
 	font-size: 14px;
 }
 
-.form-field textarea {
+.campo-formulario textarea {
 	min-height: 100px;
 	resize: vertical;
 }
 
-.form-field input:focus,
-.form-field select:focus,
-.form-field textarea:focus {
+.campo-formulario input:focus,
+.campo-formulario select:focus,
+.campo-formulario textarea:focus {
 	outline: 2px solid var(--green);
 	outline-offset: 2px;
 }
 
-.consent {
+.consentimento {
 	margin: 20px 0;
 	display: flex;
 	align-items: flex-start;
@@ -614,18 +530,18 @@ h2 em {
 	font-weight: 400;
 }
 
-.consent input {
+.consentimento input {
 	margin-top: 4px;
 	accent-color: var(--green);
 }
 
-.registration-form .button {
+.formulario-cadastro .botao {
 	width: 100%;
 	cursor: pointer;
 	font-family: inherit;
 }
 
-.form-footnote {
+.nota-formulario {
 	margin: 14px 0 0;
 	color: var(--muted);
 	font-size: 11px;
@@ -633,213 +549,213 @@ h2 em {
 }
 
 @media (max-width: 860px) {
-	.hero {
+	.destaque {
 		min-height: auto;
 		gap: 42px;
 	}
 
-	.hero h1 {
+	.destaque h1 {
 		font-size: 48px;
 	}
 
-	.hero-image {
+	.imagem-destaque {
 		height: 350px;
 	}
 
-	.volunteer-inner {
+	.conteudo-voluntariado {
 		grid-template-columns: 58px minmax(0, 1fr);
 		gap: 24px;
 	}
 
-	.volunteer-symbol {
+	.simbolo-voluntariado {
 		width: 56px;
 		height: 56px;
 	}
 
-	.volunteer .button {
+	.voluntariado .botao {
 		grid-column: 2;
 		justify-self: start;
 	}
 
-	.signup {
+	.secao-cadastro {
 		grid-template-columns: 1fr 1fr;
 		gap: 24px;
 	}
 
-	.signup .button {
+	.secao-cadastro .botao {
 		justify-self: start;
 	}
 
-	.registration-main {
+	.conteudo-cadastro {
 		grid-template-columns: 0.8fr 1.2fr;
 		gap: 38px;
 	}
 }
 
 @media (max-width: 620px) {
-	.site-header,
-	.hero,
-	.section-shell,
-	.volunteer-inner {
+	.cabecalho-site,
+	.destaque,
+	.largura-conteudo,
+	.conteudo-voluntariado {
 		width: calc(100% - 36px);
 	}
 
-	.site-header {
+	.cabecalho-site {
 		min-height: 72px;
 		gap: 12px;
 	}
 
-	.brand {
+	.marca {
 		gap: 7px;
 		font-size: 17px;
 	}
 
-	.brand-mark {
+	.simbolo-marca {
 		width: 30px;
 		height: 30px;
 		font-size: 22px;
 	}
 
-	.main-nav {
+	.navegacao-principal {
 		gap: 12px;
 		font-size: 12px;
 	}
 
-	.main-nav a:first-child {
+	.navegacao-principal a:first-child {
 		display: none;
 	}
 
-	.main-nav .nav-cta {
+	.navegacao-principal .botao-navegacao {
 		padding: 8px 10px;
 	}
 
-	.hero {
+	.destaque {
 		padding: 48px 0 58px;
 		grid-template-columns: 1fr;
 		gap: 34px;
 	}
 
-	.hero h1 {
+	.destaque h1 {
 		max-width: 430px;
 		font-size: 48px;
 	}
 
-	.hero-description {
+	.descricao-destaque {
 		font-size: 15px;
 	}
 
-	.hero-image {
+	.imagem-destaque {
 		height: min(74vw, 360px);
 	}
 
-	.hero-sticker {
+	.selo-destaque {
 		right: -7px;
 		width: 72px;
 		height: 72px;
 		font-size: 13px;
 	}
 
-	.catalog {
+	.secao-adocao {
 		padding: 54px 0 62px;
 	}
 
-	.section-heading {
+	.cabecalho-secao {
 		margin-bottom: 24px;
 		display: block;
 	}
 
-	.section-heading h2,
-	.volunteer h2 {
+	.cabecalho-secao h2,
+	.voluntariado h2 {
 		font-size: 34px;
 	}
 
-	.section-heading > p {
+	.cabecalho-secao > p {
 		margin: 14px 0 0;
 	}
 
-	.animal-grid {
+	.grade-animais {
 		grid-template-columns: 1fr;
 		gap: 16px;
 	}
 
-	.animal-photo {
+	.foto-animal {
 		aspect-ratio: 1.65;
 	}
 
-	.animal-info > p {
+	.dados-animal > p {
 		min-height: auto;
 	}
 
-	.volunteer-inner {
+	.conteudo-voluntariado {
 		padding: 40px 0;
 		grid-template-columns: 1fr;
 		gap: 18px;
 	}
 
-	.volunteer-symbol {
+	.simbolo-voluntariado {
 		width: 48px;
 		height: 48px;
 		font-size: 26px;
 	}
 
-	.volunteer .button {
+	.voluntariado .botao {
 		grid-column: auto;
 	}
 
-	.signup {
+	.secao-cadastro {
 		min-height: auto;
 		padding: 50px 0;
 		grid-template-columns: 1fr;
 		gap: 18px;
 	}
 
-	.signup h2 {
+	.secao-cadastro h2 {
 		font-size: 30px;
 	}
 
-	.site-footer {
+	.rodape-site {
 		padding: 24px 18px;
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		gap: 14px;
 	}
 
-	.site-footer p {
+	.rodape-site p {
 		grid-column: 1 / -1;
 		grid-row: 2;
 	}
 
-	.site-footer small {
+	.rodape-site small {
 		justify-self: end;
 	}
 
-	.registration-main {
+	.conteudo-cadastro {
 		width: calc(100% - 36px);
 		padding: 42px 0 56px;
 		grid-template-columns: 1fr;
 		gap: 28px;
 	}
 
-	.registration-intro {
+	.introducao-cadastro {
 		position: static;
 		padding-top: 0;
 	}
 
-	.registration-intro h1 {
+	.introducao-cadastro h1 {
 		margin-bottom: 12px;
 		font-size: 40px;
 	}
 
-	.registration-form {
+	.formulario-cadastro {
 		padding: 22px 18px;
 	}
 
-	.form-grid {
+	.grade-formulario {
 		grid-template-columns: 1fr;
 		gap: 15px;
 	}
 
-	.form-field-full {
+	.campo-formulario-integral {
 		grid-column: auto;
 	}
 }
