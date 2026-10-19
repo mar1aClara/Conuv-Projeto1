@@ -358,10 +358,15 @@ h2 em {
 	color: var(--green);
 	font-size: 13px;
 	font-weight: 700;
+	border: var(--green) 1px solid;
+	padding: 6px 12px;
+	border-radius: 3px;
 }
 
 .link-texto:hover {
-	color: var(--coral);
+	color: var(--white);
+	background: var(--coral);
+	border-color: var(--coral);
 }
 
 .nota-catalogo {
@@ -371,11 +376,10 @@ h2 em {
 }
 
 .voluntariado {
-	background-image: linear-gradient(to right, var(--green) 70%, rgba(33, 77, 64, 0.4) 20%), url(/img/gato1.jpg);
+	background-image:linear-gradient(to right, var(--green) 64%, rgba(33, 77, 64, 0.4)), url(/img/gato1.jpg);
 	background-position: right;
-	background-repeat: no-repeat;
+	background-color: var(--green);
 	color: var(--white);
-	display: flex;
 }
 
 .conteudo-voluntariado {
