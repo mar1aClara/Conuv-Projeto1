@@ -1,11 +1,104 @@
-<!DOCTYPE html>
-<html lang="en">
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <title>Apoio Pet</title>
 </head>
+
 <body>
+    <header class="cabecalho-site">
+        <a class="logotipo" href="index.html">
+            <img id="logoimg" src="/img/logo.png" alt="Logo Apoio Pet">
+            <p class="centralizacao">Apoio<strong>Pet</strong></p>
+        </a>
+        <nav class="navegacao">
+            <a href="#adocao">Para adotar</a>
+            <a href="#voluntariado">Voluntariado</a>
+            <a class="botao-cadastro" href="/pages/cadastro.html">Cadastrar</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="destaque">
+            <div class="texto-destaque">
+                <h1 id="titulo-destaque">Um novo melhor amigo está <em>por aqui.</em></h1>
+                <p class="descricao-destaque">Conheça histórias que merecem um final feliz. Talvez a próxima comece com vocês.</p>
+                <a class="botao botao-escuro" href="#adocao">Conheça os animais</a>
+            </div>
+        </section>
+
+        <section class="secao-adocao largura-conteudo" id="adocao">
+            <div class="cabecalho-secao">
+                <div>
+                    <p class="chamada">Prontos para conhecer você</p>
+                    <h2 id="titulo-catalogo">Encontre seu <em>companheiro:</em></h2>
+                </div>
+                <p>Um encontro pode mudar duas vidas. Veja quem está esperando por uma família.</p>
+            </div>
+            <div class="grade-animais">
+
+                <article class="cartao-animal">
+                    <a class="foto-animal" href="/pages/cadastro.html">
+                        <img src="/img/amora.jpg" alt="Gata rajada descansando" />
+                    </a>
+                    <div class="dados-animal">
+                        <div class="titulo-animal"><h3>Amora</h3></div>
+                        <p>Carinhosa, tranquila e fã de uma janela ensolarada.</p>
+                        <a class="link-texto" href="/pages/cadastro.html">Quero conhecer</a>
+                    </div>
+                </article>
+
+                <article class="cartao-animal">
+                    <a class="foto-animal" href="/pages/cadastro.html" aria-label="Demonstrar interesse em adotar o Bento">
+                        <img src="/img/bento.jpg" alt="Cachorro golden retriever ao ar livre"/>
+                    </a>
+                    <div class="dados-animal">
+                        <div class="titulo-animal"><h3>Bento</h3></div>
+                        <p>Cheio de energia e pronto para passeios e brincadeiras.</p>
+                        <a class="link-texto" href="/pages/cadastro.html">Quero conhecer</a>
+                    </div>
+                </article>
+
+                <article class="cartao-animal">
+                    <a class="foto-animal" href="/pages/cadastro.html">
+                        <img src="/img/nina.jpg" alt="Gata branca e cinza olhando para a câmera"  />
+                    </a>
+                    <div class="dados-animal">
+                        <div class="titulo-animal"><h3>Nina</h3></div>
+                        <p>Curiosa e delicada; adora descobrir cantinhos novos.</p>
+                        <a class="link-texto" href="/pages/cadastro.html">Quero conhecer</a>
+                    </div>
+                </article>
+
+                <article class="cartao-animal">
+                    <a class="foto-animal" href="/pages/cadastro.html">
+                        <img src="/img/mia.jpg" alt="Gata malhada olhando para a câmera"  />
+                    </a>
+                    <div class="dados-animal">
+                        <div class="titulo-animal"><h3>Mia</h3></div>
+                        <p>Gata malhada, curiosa e muito carinhosa.</p>
+                        <a class="link-texto" href="/pages/cadastro.html">Quero conhecer</a>
+                    </div>
+                </article>
+            </div>
     
+        </section>
+
+        <section class="voluntariado" id="voluntariado" >
+            <div class="conteudo-voluntariado">
+                <p class="chamada">Toda ajuda faz diferença</p>
+                <h2 id="titulo-voluntariado">Tem um tempinho e <em>muito carinho?</em></h2>
+                <p>Ajude nos cuidados, nos passeios ou compartilhando histórias. Tem um jeito de participar que combina com você.</p>
+                <a class="botao botao-claro" href="/pages/cadastro.html#formulario">Quero ser voluntário</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="rodape-site">
+        <p>Mais cuidado, mais encontros felizes.</p>
+        <small>© 2026 Apoio Pet</small>
+    </footer>
 </body>
 </html>

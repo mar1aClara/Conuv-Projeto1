@@ -1,0 +1,777 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap');
+
+:root {
+	color-scheme: light;
+	--ink: #183b32;
+	--muted: #66736c;
+	--paper: #fbfaf6;
+	--white: #fffefa;
+	--line: #e7e7dc;
+	--green: #214d40;
+	--coral: #e97658;
+	--yellow: #f2ce58;
+	--font-body: 'DM Sans', sans-serif;
+	--font-display: 'Fraunces', Georgia, serif;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+	background: var(--paper);
+	color: var(--ink);
+	font-family: var(--font-body);
+	font-size: 16px;
+	line-height: 1.55;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.centralizacao{
+	margin-top: 15px;
+}
+.cabecalho-site {
+	width: 100%;
+	padding:10px 32px;
+	min-height: 84px;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 28px;
+	border-bottom: 1px solid var(--line);
+}
+
+.logotipo {
+	display: inline-flex;
+	align-items: center;
+	gap: 10px;
+	font-size: 19px;
+	font-weight: 500;
+	white-space: nowrap;
+}
+
+#logoimg{
+	width: 50px;
+	height: 50px;
+}
+
+.marca strong {
+	font-weight: 700;
+}
+
+.simbolo-marca {
+	width: 34px;
+	height: 34px;
+	display: grid;
+	place-items: center;
+	border-radius: 50%;
+	background: var(--coral);
+	color: var(--white);
+	font-family: var(--font-display);
+	font-size: 24px;
+	line-height: 1;
+}
+
+.navegacao {
+	display: flex;
+	align-items: center;
+	gap: 32px;
+	font-size: 14px;
+	font-weight: 600;
+}
+
+.navegacao a,
+.rodape-site a {
+	transition: color 160ms ease;
+}
+
+.navegacao a:hover,
+.rodape-site a:hover {
+	color: var(--coral);
+}
+
+.navegacao .botao-cadastro {
+	padding: 10px 16px;
+	border: 1px solid var(--ink);
+	border-radius: 3px;
+}
+
+.navegacao .botao-cadastro span,
+.botao span,
+.link-texto span,
+.rodape-site a span {
+	margin-left: 8px;
+}
+
+.destaque {
+	width: 100%;
+	min-height: 580px;
+	margin: 0 auto;
+	padding: 68px;
+	display: grid;
+	grid-template-columns: 0.9fr 1.1fr;
+	align-items: center;
+	gap:20px;
+	background-image:linear-gradient(to right, var(--green) 45%, rgba(33, 77, 64, 0.4) 55%), url(/img/cachorro1.jpg);
+	background-position: right;
+	background-color: var(--green);
+	color: var(--white);
+}
+
+.texto-destaque {
+	max-width: 490px;
+	padding-bottom: 10px;
+	
+}
+
+.destaque  span {
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: var(--coral);
+}
+
+h1,
+h2,
+h3,
+p {
+	margin-top: 0;
+}
+
+h1,
+h2,
+h3 {
+	line-height: 1.12;
+}
+
+.destaque h1,
+.cabecalho-secao h2,
+.voluntariado h2,
+.secao-cadastro h2,
+.introducao-cadastro h1 {
+	margin-bottom: 20px;
+	font-family: var(--font-display);
+	font-weight: 600;
+	letter-spacing: 0;
+}
+
+.destaque h1 {
+	max-width: 470px;
+	font-size: clamp(42px, 5vw, 64px);
+}
+
+h1 em,
+h2 em {
+	color: var(--coral);
+	font-weight: 600;
+}
+
+.descricao-destaque {
+	max-width: 400px;
+	margin-bottom: 28px;
+	color: var(--white);
+	font-size: 17px;
+}
+
+.botao {
+	min-height: 48px;
+	padding: 12px 18px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid transparent;
+	border-radius: 3px;
+	font-size: 14px;
+	font-weight: 700;
+	transition: transform 160ms ease, background-color 160ms ease;
+}
+
+.botao:hover {
+	transform: translateY(-2px);
+}
+
+.botao-escuro {
+	background: var(--coral);
+	color: var(--white);
+}
+
+.botao-escuro:hover {
+	background: var(--green);
+}
+
+.botao-claro {
+	flex: 0 0 auto;
+	background: var(--yellow);
+	color: var(--ink);
+}
+
+.imagem-destaque {
+	width: 100%;
+	height: 410px;
+	object-fit: cover;
+	object-position: center 43%;
+}
+
+.legenda-imagem {
+	position: absolute;
+	right: 32px;
+	bottom: 31px;
+	padding: 10px 14px;
+	background: var(--white);
+	color: var(--ink);
+	font-size: 12px;
+	font-weight: 700;
+}
+
+.legenda-imagem  {
+	margin-left: 8px;
+	color: var(--coral);
+	font-size: 16px;
+}
+
+
+.largura-conteudo {
+	width: 100%;
+	margin: 0 auto;
+}
+
+.secao-adocao {
+	padding: 70px ;
+	border-top: 1px solid var(--line);
+}
+
+.cabecalho-secao {
+	margin-bottom: 34px;
+	display: flex;
+	align-items: end;
+	justify-content: space-between; 
+	 gap: 48px; 
+}
+
+.cabecalho-secao .chamada {
+	margin-bottom: 12px;
+}
+
+.cabecalho-secao h2,
+.voluntariado h2,
+.secao-cadastro h2 {
+	margin-bottom: 0;
+	font-size: 40px;
+}
+
+.cabecalho-secao > p {
+	max-width: 350px;
+	margin-bottom: 4px;
+	color: var(--muted);
+	font-size: 14px;
+}
+
+.grade-animais {
+	display: grid;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+	gap: 24px;
+	padding: 4px;
+}
+
+.cartao-animal {
+	min-width: 0;
+	background: var(--white);
+	border: 1px solid var(--line);
+}
+
+.foto-animal {
+	position: relative;
+	display: block;
+	overflow: hidden;
+	aspect-ratio: 1.38;
+	background: #e8eee9;
+}
+
+.foto-animal img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: transform 220ms ease;
+}
+
+.foto-animal:hover img {
+	transform: scale(1.04);
+}
+
+.etiqueta-animal {
+	position: absolute;
+	right: 12px;
+	bottom: 12px;
+	padding: 5px 10px;
+	background: var(--yellow);
+	color: var(--ink);
+	font-size: 11px;
+	font-weight: 700;
+}
+
+.dados-animal {
+	padding: 18px 20px 20px;
+}
+
+.titulo-animal {
+	display: flex;
+	align-items: baseline;
+	justify-content: space-between;
+	gap: 12px;
+}
+
+.titulo-animal h3 {
+	margin: 0;
+	font-family: var(--font-display);
+	font-size: 24px;
+	font-weight: 600;
+}
+
+.titulo-animal span {
+	color: var(--muted);
+	font-size: 12px;
+}
+
+.dados-animal > p {
+	min-height: 44px;
+	margin: 10px 0 15px;
+	color: var(--muted);
+	font-size: 13px;
+}
+
+.link-texto {
+	color: var(--green);
+	font-size: 13px;
+	font-weight: 700;
+	border: var(--green) 1px solid;
+	padding: 6px 12px;
+	border-radius: 3px;
+}
+
+.link-texto:hover {
+	color: var(--white);
+	background: var(--coral);
+	border-color: var(--coral);
+}
+
+.nota-catalogo {
+	margin: 16px 0 0;
+	color: var(--muted);
+	font-size: 11px;
+}
+
+.voluntariado {
+	background-image:linear-gradient(to right, var(--green) 64%, rgba(33, 77, 64, 0.4)), url(/img/gato1.jpg);
+	background-position: right;
+	background-color: var(--green);
+	color: var(--white);
+}
+
+.conteudo-voluntariado {
+	min-height: 270px;
+	padding: 52px ;
+	gap: 34px;
+} 
+
+.voluntariado .chamada {
+	margin-bottom: 12px;
+	color: var(--yellow);
+}
+
+.voluntariado h2 {
+	max-width: 620px;
+	margin-bottom: 12px;
+}
+
+.voluntariado h2 em {
+	color: var(--yellow);
+}
+
+.rodape-site {
+	min-height: 92px;
+	padding: 20px max(32px, calc((100% - 1240px) / 2));
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 20px;
+	border-top: 1px solid var(--line);
+	font-size: 12px;
+}
+
+.marca-rodape {
+	font-size: 16px;
+}
+
+.marca-rodape .simbolo-marca {
+	width: 29px;
+	height: 29px;
+	font-size: 21px;
+}
+
+.rodape-site p {
+	margin: 0;
+	color: var(--muted);
+}
+
+.rodape-site small {
+	color: var(--muted);
+	white-space: nowrap;
+}
+
+.pagina-cadastro {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+.conteudo-cadastro {
+	width: min(1060px, calc(100% - 64px));
+	margin: 0 auto;
+	padding: 68px 0 80px;
+	display: grid;
+	grid-template-columns: 0.78fr 1.22fr;
+	align-items: start;
+	gap: clamp(40px, 8vw, 100px);
+}
+
+.introducao-cadastro {
+	position: sticky;
+	top: 40px;
+	padding-top: 18px;
+}
+
+.introducao-cadastro h1 {
+	font-size: 48px;
+}
+
+.introducao-cadastro > p:last-child {
+	max-width: 350px;
+	color: var(--muted);
+}
+
+.formulario-cadastro {
+	padding: 30px;
+	background: var(--white);
+	border: 1px solid var(--line);
+}
+
+.formulario-cadastro h2 {
+	margin-bottom: 22px;
+	font-family: var(--font-display);
+	font-size: 24px;
+	font-weight: 600;
+}
+
+.grade-formulario {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 18px 16px;
+}
+
+.campo-formulario {
+	display: flex;
+	flex-direction: column;
+	gap: 7px;
+}
+
+.campo-formulario-integral {
+	grid-column: 1 / -1;
+}
+
+.campo-formulario label,
+.consentimento {
+	font-size: 13px;
+	font-weight: 600;
+}
+
+.campo-formulario input,
+.campo-formulario select,
+.campo-formulario textarea {
+	width: 100%;
+	min-height: 46px;
+	padding: 10px 12px;
+	border: 1px solid #cfd7d1;
+	border-radius: 2px;
+	background: var(--paper);
+	color: var(--ink);
+	font: inherit;
+	font-size: 14px;
+}
+
+.campo-formulario textarea {
+	min-height: 100px;
+	resize: vertical;
+}
+
+.campo-formulario input:focus,
+.campo-formulario select:focus,
+.campo-formulario textarea:focus {
+	outline: 2px solid var(--green);
+	outline-offset: 2px;
+}
+
+.consentimento {
+	margin: 20px 0;
+	display: flex;
+	align-items: flex-start;
+	gap: 9px;
+	color: var(--muted);
+	font-weight: 400;
+}
+
+.consentimento input {
+	margin-top: 4px;
+	accent-color: var(--green);
+}
+
+.formulario-cadastro .botao {
+	width: 100%;
+	cursor: pointer;
+	font-family: inherit;
+}
+
+.nota-formulario {
+	margin: 14px 0 0;
+	color: var(--muted);
+	font-size: 11px;
+	text-align: center;
+}
+
+@media (max-width: 860px) {
+	.destaque {
+		min-height: auto;
+		gap: 42px;
+	}
+
+	.destaque h1 {
+		font-size: 48px;
+	}
+
+	.imagem-destaque {
+		height: 350px;
+	}
+
+	.conteudo-voluntariado {
+		grid-template-columns: 58px minmax(0, 1fr);
+		gap: 24px;
+	}
+
+	.simbolo-voluntariado {
+		width: 56px;
+		height: 56px;
+	}
+
+	.voluntariado .botao {
+		grid-column: 2;
+		justify-self: start;
+	}
+
+	.secao-cadastro {
+		grid-template-columns: 1fr 1fr;
+		gap: 24px;
+	}
+
+	.secao-cadastro .botao {
+		justify-self: start;
+	}
+
+	.conteudo-cadastro {
+		grid-template-columns: 0.8fr 1.2fr;
+		gap: 38px;
+	}
+}
+
+@media (max-width: 620px) {
+	.cabecalho-site,
+	.destaque,
+	.largura-conteudo,
+	.conteudo-voluntariado {
+		width: calc(100% - 36px);
+	}
+
+	.cabecalho-site {
+		min-height: 72px;
+		gap: 12px;
+	}
+
+	.marca {
+		gap: 7px;
+		font-size: 17px;
+	}
+
+	.simbolo-marca {
+		width: 30px;
+		height: 30px;
+		font-size: 22px;
+	}
+
+	.navegacao-principal {
+		gap: 12px;
+		font-size: 12px;
+	}
+
+	.navegacao-principal a:first-child {
+		display: none;
+	}
+
+	.navegacao-principal .botao-navegacao {
+		padding: 8px 10px;
+	}
+
+	.destaque {
+		padding: 48px 0 58px;
+		grid-template-columns: 1fr;
+		gap: 34px;
+	}
+
+	.destaque h1 {
+		max-width: 430px;
+		font-size: 48px;
+	}
+
+	.descricao-destaque {
+		font-size: 15px;
+	}
+
+	.imagem-destaque {
+		height: min(74vw, 360px);
+	}
+
+	.selo-destaque {
+		right: -7px;
+		width: 72px;
+		height: 72px;
+		font-size: 13px;
+	}
+
+	.secao-adocao {
+		padding: 54px 0 62px;
+	}
+
+	.cabecalho-secao {
+		margin-bottom: 24px;
+		display: block;
+	}
+
+	.cabecalho-secao h2,
+	.voluntariado h2 {
+		font-size: 34px;
+	}
+
+	.cabecalho-secao > p {
+		margin: 14px 0 0;
+	}
+
+	.grade-animais {
+		grid-template-columns: 1fr;
+		gap: 16px;
+	}
+
+	.foto-animal {
+		aspect-ratio: 1.65;
+	}
+
+	.dados-animal > p {
+		min-height: auto;
+	}
+
+	.conteudo-voluntariado {
+		padding: 40px 0;
+		grid-template-columns: 1fr;
+		gap: 18px;
+	}
+
+	.simbolo-voluntariado {
+		width: 48px;
+		height: 48px;
+		font-size: 26px;
+	}
+
+	.voluntariado .botao {
+		grid-column: auto;
+	}
+
+	.secao-cadastro {
+		min-height: auto;
+		padding: 50px 0;
+		grid-template-columns: 1fr;
+		gap: 18px;
+	}
+
+	.secao-cadastro h2 {
+		font-size: 30px;
+	}
+
+	.rodape-site {
+		padding: 24px 18px;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 14px;
+	}
+
+	.rodape-site p {
+		grid-column: 1 / -1;
+		grid-row: 2;
+	}
+
+	.rodape-site small {
+		justify-self: end;
+	}
+
+	.conteudo-cadastro {
+		width: calc(100% - 36px);
+		padding: 42px 0 56px;
+		grid-template-columns: 1fr;
+		gap: 28px;
+	}
+
+	.introducao-cadastro {
+		position: static;
+		padding-top: 0;
+	}
+
+	.introducao-cadastro h1 {
+		margin-bottom: 12px;
+		font-size: 40px;
+	}
+
+	.formulario-cadastro {
+		padding: 22px 18px;
+	}
+
+	.grade-formulario {
+		grid-template-columns: 1fr;
+		gap: 15px;
+	}
+
+	.campo-formulario-integral {
+		grid-column: auto;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+
+	*,
+	*::before,
+	*::after {
+		transition-duration: 0.01ms !important;
+	}
+}
